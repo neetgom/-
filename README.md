@@ -5,12 +5,31 @@
 <div align="left">
 
 # 1. 프로젝트 개요
+
 - 지원 분야: 넥슨네트웍스 판교센터 게임QA (채용연계형 인턴)
 - 주요 대상 프로젝트:
   - 테스트 케이스 : 원신 (Genshin Impact) - 6.3 업데이트 '달 결정(물+바위)' 신규 반응 시스템 검증
   - 게임 분석서 작성: 아크레이더스 (ARC Raiders) - 루트 슈터 장르의 핵심 시스템 및 QA 관점의 리스크 분석
+- 사용 기술 및 도구:
+  - Analysis: AVerMedia GC553 Ultra (4K HDR 패스스루 활용 정밀 분석), OBS Studio, Unity Profiler, ADB Shell
+  - Collaboration: Jira(Zephyr 스타일), Confluence, Slack
+  - Document: Google Sheets (TC), Markdown, GitHub (버전 관리)
 
+    
 # 2. 테스트 전략 및 방법론
+
+- 🧪 **테스트 접근 방식**
+  - Logic & Priority Testing: 물과 바위 원소의 부착 순서에 따른 반응 여부 및 타 원소(불, 얼음 등) 개입 시 '증발' 등 기존 반응과의 우선순위 메커니즘 검증.
+  - Precision Analysis: AVerMedia GC553 Ultra를 통해 모바일 화면을 PC로 송출하여, 육안으로 놓치기 쉬운 데미지 폰트 겹침이나 이펙트 소실 시점을 $ms$(밀리초) 단위로 정밀 분석.
+  - Repetitive Robustness: 조각 생성 위치 및 3스택 자동 공격 타겟팅의 정확성을 확인하기 위해 동일 조건에서 20회 이상의 반복 테스트 수행.
+
+- 📈 **워크플로우 (QA Process)**
+	- 업데이트 분석: 6.3 패치노트를 기반으로 '달 결정'의 핵심 루프(반응 -> 조각 생성 -> 3스택 공격) 분석.
+	- 구조화된 TC 설계: Jira-Zephyr 스타일의 템플릿을 활용하여 절차(Step)와 기대 결과(Expected Result)가 명확한 테스트 케이스 작성.
+	- 수행 및 환경 검증: 나선 비경 등 변수가 통제된 환경에서 고사양 기기($S25$ $Ultra$)를 활용한 기본 동작 및 심화 테스트 수행.
+	- 리스크 관리: 테스트 중 발견된 지형 끼임, 오작동 리스크를 분석하여 수정 확인 및 개선안 도출.
+
+
 
 
 # 3. 테스트 범위
