@@ -50,4 +50,40 @@
    
 # 4. 상세 테스트 환경
 
-	
+<br> - **[테스트케이스] 원신 (Genshin Impact) 테스트 환경**
+
+모바일 기기 및 정밀 분석 장비를 활용한 크로스 플랫폼 데이터 검증 설정입니다.
+| 구분 | 상세 사양 |
+| :--- | :--- |
+| Mobile Device | Galaxy S25 Ultra (SM-S938N) / Android 16 |
+| Analysis PC | 레노버 LEGION 5i Pro (WIN 11 Pro 23H2, RTX 3070 Laptop) |
+| Analysis Tools | AVerMedia GC553 Ultra (Live Gamer Ultra), OBS Studio |
+| 검증 방식 | 모바일 화면을 노트북으로 송출하여 4K/60fps 녹화 및 프레임 분석 수행 |
+
+<br> - **[분석서] 아크레이더스 (ARC Raiders) 테스트 환경**
+
+하이엔드 데스크탑 환경에서의 시스템 안정성 및 슈팅 메커니즘 분석을 위한 설정입니다.
+| 구분 | 상세 사양 |
+| :--- | :--- |
+| CPU | AMD Ryzen 5 9600X |
+| GPU | AMD Radeon 9070XT |
+| RAM | 16GB |
+| OS | Windows 11 Pro 23H2 |
+| Network Tool | Clumsy (Packet Loss 5% 등 네트워크 불안정 상황 시뮬레이션) |
+
+
+ - 📝 **주요 성과 및 결함 관리 (Bug Highlights)**
+   
+   - 원신 Critical Bug (예상): "달 결정 조각이 특정 지형(경사면/바위 창조물) 내부로 생성되어 캐릭터가 접근해도 수집되지 않는 'Collision Clipping' 현상 발견."
+   - 원신 Logic Error: "불 원소 부착 상태에서 바위 공격 시 '결정화'보다 '달 결정' 반응이 우선되는 패치노트 불일치 이슈 탐지."
+   - 아크레이더스 Insight: "탈출 구역 활성화 타이머와 실제 서버 동기화 오차($ms$ 단위)가 발생할 경우 유저 경험에 치명적일 수 있음을 분석하여 검증 시나리오 제안."
+
+
+
+
+
+
+
+
+
+
